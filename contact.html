@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    contact.html
+    Propósito: Formulario para recibir feedback, sugerencias o preguntas de los usuarios.
+    Funcionamiento: El formulario se envía mediante AJAX a /api/contact y el servidor guarda los mensajes en db/contacts.json.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - 7 Days to Die</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpeg" alt="Logo del juego" class="logo">
+            </a>
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="crafting.html">Crafteo</a>
+                <a href="items.html">Objetos</a>
+                <a href="survival.html">Supervivencia</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>📬 Contacto</h1>
+            <p>¿Tienes sugerencias para mejorar la guía? ¡Nos encantaría escucharte!</p>
+        </section>
+
+        <section class="section">
+            <div class="contact-form">
+                <form id="contactForm" action="#" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <select id="subject" name="subject">
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="correccion">Corrección</option>
+                            <option value="pregunta">Pregunta</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                    <p id="contactStatus" aria-live="polite" style="margin-top:1rem;color:var(--color-text);"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Guía creada por zander2383 fan de 7 Days to Die</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

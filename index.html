@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+    index.html
+    Propósito: Página principal de la guía de 7 Days to Die.
+    Estructura:
+    - Header: logo y navegación principal
+    - Main: introducción y CTA a las guías
+    - Footer: créditos
+    Nota: los enlaces del header apuntan a las páginas locales (crafting.html, items.html, survival.html, contact.html).
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Supervivencia - 7 Days to Die</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.jpeg" alt="Logo del juego" class="logo">
+            </a>
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="crafting.html">Crafteo</a>
+                <a href="items.html">Objetos</a>
+                <a href="survival.html">Supervivencia</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>🏠 Guía de Supervivencia - 7 Days to Die</h1>
+            <p><strong>7 Days to Die</strong> es un juego de supervivencia post-apocalíptico en mundo abierto, donde debes recolectar recursos, construir refugios y resistir oleadas de zombis que se vuelven cada vez más letales.</p>
+            <p>El objetivo principal es <strong>sobrevivir el mayor tiempo posible</strong>, manteniendo tu salud, alimentación, energía y defensa mientras el entorno se vuelve más hostil.</p>
+            <a href="survival.html" class="btn">Comienza tu supervivencia</a>
+        </section>
+
+        <section class="section">
+            <h2>📚 Guías disponibles</h2>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <h3>⚒️ Crafteo y mejora de objetos</h3>
+                    <p>Aprende a fabricar herramientas, armas y estructuras esenciales para tu supervivencia.</p>
+                    <a href="crafting.html" class="btn">Ver guía de crafteo</a>
+                </div>
+                
+                <div class="guide-card">
+                    <h3>🎒 Obtención de recursos</h3>
+                    <p>Descubre dónde encontrar los materiales más importantes y cómo mejorar tu equipamiento.</p>
+                    <a href="items.html" class="btn">Ver guía de objetos</a>
+                </div>
+                
+                <div class="guide-card">
+                    <h3>⚔️ Tácticas de supervivencia</h3>
+                    <p>Estrategias para sobrevivir a las hordas y prosperar en este mundo hostil.</p>
+                    <a href="survival.html" class="btn">Ver guía de supervivencia</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Guía creada por zander2383 fan de 7 Days to Die</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/* Estilos generales */
+/*
+    styles.css
+    Propósito: Estilos globales para la guía. Tema oscuro post-apocalíptico.
+    Variables principales:
+    - --color-primary: fondo principal
+    - --color-secondary: fondos secundarios y bordes
+    - --color-accent: color de acento (rojo)
+    - --color-text: color del texto
+    - --shadow-neon: sombra para efectos neon
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+        --color-primary: #1a1a1a;
+        --color-secondary: #2d2d2d;
+        --color-accent: #ff4444;
+        --color-text: #e0e0e0;
+        --color-danger: #ff6b6b;
+        --shadow-neon: 0 0 10px rgba(255, 68, 68, 0.5);
+        --gradient-dark: linear-gradient(to bottom, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.95));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+}
+
+/* Header y navegación */
+header {
+    background: rgba(26, 26, 26, 0.95);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--color-accent);
+    box-shadow: 0 2px 20px rgba(255, 68, 68, 0.1);
+}
+
+.logo {
+    height: 60px;
+    filter: drop-shadow(0 0 5px var(--color-accent));
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+    text-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Contenido principal */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.intro {
+    background: rgba(45, 45, 45, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--color-accent);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 68, 68, 0.3);
+}
+
+/* Secciones de contenido */
+.section {
+    background: rgba(45, 45, 45, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.resource-table th,
+.resource-table td {
+    padding: 1rem;
+    border: 1px solid var(--color-secondary);
+    text-align: left;
+}
+
+.resource-table th {
+    background: var(--color-secondary);
+    color: var(--color-accent);
+}
+
+/* Footer */
+footer {
+    background: rgba(26, 26, 26, 0.95);
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 2px solid var(--color-accent);
+}
+
+/* Elementos adicionales */
+.items-grid,
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.item-card,
+.tip-card {
+    background: rgba(26, 26, 26, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover,
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 68, 68, 0.2);
+}
+
+.survival-tips {
+    margin-top: 1.5rem;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .items-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
